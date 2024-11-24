@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div
+      id="key"
+      style="
+        width: 200px;
+        height: 200px;
+        border-color: black;
+        border-width: 2px;
+      "
+    ></div>
+
+    <script>
+      let color = "white";
+      let color2 = "";
+      document.addEventListener("keydown", function (event) {
+        if (event.key === "a") {
+          color = "pink";
+          document.getElementById("key").style.backgroundColor = color;
+        } else if (event.key === "s") {
+          color = "orange";
+          document.getElementById("key").style.backgroundColor = color;
+        } else if (event.key === "d") {
+          color = "cyan";
+          document.getElementById("key").style.backgroundColor = color;
+        } else if (
+          event.key === "q" ||
+          event.key === "w" ||
+          event.key === "e"
+        ) {
+          if (!document.getElementById("nuevodiv")) {
+            nuevodiv = document.createElement("div");
+            nuevodiv.id = "nuevodiv";
+            nuevodiv.style.width = "200px";
+            nuevodiv.style.height = "200px";
+            document.body.appendChild(nuevodiv);
+          }
+          if (event.key === "q") {
+            color2 = "purple";
+            document.getElementById("nuevodiv").style.backgroundColor = color2;
+          } else if (event.key === "w") {
+            color2 = "gray";
+            document.getElementById("nuevodiv").style.backgroundColor = color2;
+          } else if (event.key === "e") {
+            color2 = "brown";
+            document.getElementById("nuevodiv").style.backgroundColor = color2;
+          }
+        }
+      });
+    </script>
+  </body>
+</html>

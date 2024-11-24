@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div
+      id="uno"
+      style="width: 200px; height: 200px; background-color: blue"
+    ></div>
+    <div
+      id="dos"
+      style="width: 200px; height: 200px; background-color: red"
+    ></div>
+    <div
+      id="tres"
+      style="width: 200px; height: 200px; background-color: green"
+    ></div>
+    <div
+      id="cuatro"
+      style="width: 200px; height: 200px; background-color: yellow"
+    ></div>
+    <script>
+      function pintarnegro(elemento) {
+        elemento.style.backgroundColor = "black";
+      }
+
+      uno.addEventListener("click", function () {
+        pintarnegro(this);
+      });
+      dos.addEventListener("click", function () {
+        pintarnegro(this);
+      });
+      tres.addEventListener("click", function () {
+        pintarnegro(this);
+      });
+      cuatro.addEventListener("click", function () {
+        pintarnegro(this);
+      });
+    </script>
+  </body>
+</html>
